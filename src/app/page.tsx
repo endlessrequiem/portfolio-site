@@ -1,16 +1,29 @@
 import styles from "./page.module.css";
+import {ResumeCard} from "@/components/ResumeCard";
+import {strings} from "./page.strings";
 
 export default function Home() {
     return (
         <div className={styles.page}>
             <main className={styles.main}>
-                <text>my resume</text>
-                <ul>
-                    <li>software engineer 2</li>
-                    <li>software engineer 1</li>
-                    <li>jr software engineer</li>
-                </ul>
-
+                <ResumeCard title={strings.engTwoTitle} listItems={[
+                    strings.engTwoPoint1,
+                    strings.engTwoPoint2,
+                    strings.engTwoPoint3,
+                ]}/>
+                <ResumeCard title={strings.engOneTitle} listItems={[
+                    strings.engOnePoint1,
+                    strings.engOnePoint2,
+                    strings.engOnePoint3,
+                    strings.engOnePoint4,
+                ]}/>
+                <ResumeCard title={strings.jrEngineerTitle} listItems={[
+                    strings.jrEngineerPoint1,
+                    strings.jrEngineerPoint2,
+                    strings.jrEngineerPoint3,
+                    strings.jrEngineerPoint4,
+                    strings.jrEngineerPoint5
+                ]}/>
             </main>
             <footer className={styles.footer}>
                 <a
