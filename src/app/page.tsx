@@ -1,11 +1,13 @@
 import styles from "./page.module.css";
 import {ResumeCard} from "@/components/ResumeCard";
 import {strings} from "./page.strings";
+import {PageHeader} from "@/components/PageHeader";
 
 export default function Home() {
     return (
         <div className={styles.page}>
             <main className={styles.main}>
+                <PageHeader title={strings.header} subTitle={strings.subHeader}/>
                 <ResumeCard title={strings.engTwoTitle} listItems={[
                     strings.engTwoPoint1,
                     strings.engTwoPoint2,
@@ -25,7 +27,7 @@ export default function Home() {
                     strings.jrEngineerPoint5
                 ]}/>
             </main>
-            <footer className={styles.footer}>
+            <footer className={styles.footer} style={{paddingTop: 12}}>
                 <a
                     href="https://www.linkedin.com/in/austinjwhite96/"
                     target="_blank"
@@ -33,7 +35,7 @@ export default function Home() {
                 >
                     LinkedIn
                 </a>
-                <text>|</text>
+                <span>|</span>
                 <a
                     href="https://github.com/endlessrequiem"
                     target="_blank"

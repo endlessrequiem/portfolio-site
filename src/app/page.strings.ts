@@ -14,4 +14,6 @@ export const strings = {
     engTwoPoint1: "Designed and documented (via RFC) a system for authenticating Native Android Widgets with the React Native app, establishing a framework for secure user session and access control management",
     engTwoPoint2: "Led the development of interactive IoT device control Android Widgets for Smart Locks and Thermostats, enabling users to quickly and directly adjust settings and monitor device status from their home screen",
     engTwoPoint3: "Engineered an in-house Native Android solution for secure storage of sensitive user data, replacing a problematic third-party package that caused unintended user logouts",
+    header: "Austin White",
+    subHeader: "Software Engineer | React Native, Android",
 }
