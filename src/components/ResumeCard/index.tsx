@@ -10,7 +10,7 @@ type ResumeCardProps = {
 export const ResumeCard: React.FC<ResumeCardProps> = ({title, listItems}) => {
     return (
         <view style={{border: "1px solid white", borderRadius: "10px", padding: "10px"}}>
-            <text>{title}</text>
+            <h2>{title}</h2>
             <ul>
                 {listItems.map((item, index) => <li key={index}>{item}</li>)}
             </ul>
