@@ -1,31 +1,18 @@
 import styles from "./page.module.css";
-import {ResumeCard} from "@/components/ResumeCard";
 import {strings} from "./page.strings";
 import {PageHeader} from "@/components/PageHeader";
+import {SkillsSection} from "@/components/SkillsSection";
+import React from "react";
+import {ExperienceSection} from "@/components/ExperienceSection";
+import {workExperience} from "@/util/experience";
 
 export default function Home() {
     return (
         <div className={styles.page}>
             <main className={styles.main}>
                 <PageHeader title={strings.header} subTitle={strings.subHeader}/>
-                <ResumeCard title={strings.engTwoTitle} listItems={[
-                    strings.engTwoPoint1,
-                    strings.engTwoPoint2,
-                    strings.engTwoPoint3,
-                ]}/>
-                <ResumeCard title={strings.engOneTitle} listItems={[
-                    strings.engOnePoint1,
-                    strings.engOnePoint2,
-                    strings.engOnePoint3,
-                    strings.engOnePoint4,
-                ]}/>
-                <ResumeCard title={strings.jrEngineerTitle} listItems={[
-                    strings.jrEngineerPoint1,
-                    strings.jrEngineerPoint2,
-                    strings.jrEngineerPoint3,
-                    strings.jrEngineerPoint4,
-                    strings.jrEngineerPoint5
-                ]}/>
+                <SkillsSection title={strings.skillsHeader} listItems={strings.skills}/>
+                <ExperienceSection header={strings.experienceHeader} workExperience={workExperience}/>
             </main>
             <footer className={styles.footer} style={{paddingTop: 12}}>
                 <a
