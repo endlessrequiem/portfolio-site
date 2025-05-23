@@ -1,11 +1,7 @@
 import React from "react";
 import {strings} from "@/app/page.strings";
 
-
-type EducationSectionProps = {}
-
-
-export const EducationSection: React.FC<EducationSectionProps> = ({}) => {
+export const EducationSection: React.FC = () => {
     return (
         <>
             <h2>{strings.educationHeader}</h2>
