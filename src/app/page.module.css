@@ -37,10 +37,12 @@
 }
 
 .main ul,
-.main text,
+.main span,
 .footer,
 .main h1,
 .main h2,
+.main h3,
+.main h4,
 .main span {
     font-family: var(--font-geist-mono);
     padding-left: 0;
@@ -59,6 +61,11 @@
 .main h2 {
     font-weight: 600;
     font-size: 24px;
+}
+
+.main h3 {
+    font-weight: 600;
+    font-size: 18px;
 }
 
 .footer {

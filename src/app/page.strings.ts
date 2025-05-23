@@ -43,5 +43,10 @@ export const strings = {
         "Led the development of interactive IoT device control Android Widgets for Smart Locks and Thermostats, enabling users to quickly and directly adjust settings and monitor device status from their home screen",
         "Engineered an in-house Native Android solution for secure storage of sensitive user data, replacing a problematic third-party package that caused unintended user logouts",
     ],
-
+    educationHeader: "Education",
+    university: "California State University, Stanislaus",
+    classOf: "Class of 2020",
+    degree: "Bachelor of Arts in English",
+    extracurriculars: "Extracurriculars:",
+    activities: ["Computer Science Club (President)", "StanHacks (Founder, Director)"]
 }
