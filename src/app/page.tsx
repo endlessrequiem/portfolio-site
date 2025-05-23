@@ -5,6 +5,7 @@ import {SkillsSection} from "@/components/SkillsSection";
 import React from "react";
 import {ExperienceSection} from "@/components/ExperienceSection";
 import {workExperience} from "@/util/experience";
+import {EducationSection} from "@/components/EducationSection";
 
 export default function Home() {
     return (
@@ -13,6 +14,7 @@ export default function Home() {
                 <PageHeader title={strings.header} subTitle={strings.subHeader}/>
                 <SkillsSection title={strings.skillsHeader} listItems={strings.skills}/>
                 <ExperienceSection header={strings.experienceHeader} workExperience={workExperience}/>
+                <EducationSection/>
             </main>
             <footer className={styles.footer} style={{paddingTop: 12}}>
                 <a
