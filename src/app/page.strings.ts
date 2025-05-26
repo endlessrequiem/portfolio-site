@@ -1,6 +1,8 @@
 export const strings = {
     header: "Austin White",
     subHeader: "Software Engineer | React Native, Android",
+    aboutMeTitle: "About Me",
+    aboutMeText: "I am a Software Engineer with a strong track record of building high-quality mobile applications that enhance user experience and deliver measurable impact. I've led and contributed to critical projects from concept to deployment, consistently driving improvements in performance, usability, and reliability. I thrive on solving complex technical challenges and am passionate about using technology to create innovative, user-centered solutions.",
     skillsHeader: "Skills",
     skills: [
         "TypeScript",
