@@ -50,5 +50,7 @@ export const strings = {
     classOf: "Class of 2020",
     degree: "Bachelor of Arts in English",
     extracurriculars: "Extracurriculars:",
-    activities: ["Computer Science Club (President)", "StanHacks (Founder, Director)"]
+    activities: ["Computer Science Club (President)", "StanHacks (Founder, Director)"],
+    linkedIn: "LinkedIn",
+    github: "GitHub",
 }

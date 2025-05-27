@@ -7,6 +7,7 @@ import {ExperienceSection} from "@/components/ExperienceSection";
 import {workExperience} from "@/util/experience";
 import {EducationSection} from "@/components/EducationSection";
 import {AboutMeSection} from "@/components/AboutMe";
+import {FooterLink} from "@/components/FooterLink";
 
 export default function Home() {
     return (
@@ -19,21 +20,17 @@ export default function Home() {
                 <EducationSection/>
             </main>
             <footer className={styles.footer} style={{paddingTop: 12}}>
-                <a
-                    href="https://www.linkedin.com/in/austinjwhite96/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    LinkedIn
-                </a>
+                <FooterLink
+                    text={strings.linkedIn}
+                    link={"https://www.linkedin.com/in/austinjwhite96/"}
+                    icon={"linkedin"}
+                />
                 <span>|</span>
-                <a
-                    href="https://github.com/endlessrequiem"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    GitHub
-                </a>
+                <FooterLink
+                    text={strings.github}
+                    link={"https://github.com/endlessrequiem"}
+                    icon={"github"}
+                />
             </footer>
         </div>
     );
