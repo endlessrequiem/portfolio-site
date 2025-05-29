@@ -7,7 +7,8 @@ import {ExperienceSection} from "@/components/ExperienceSection";
 import {workExperience} from "@/util/experience";
 import {EducationSection} from "@/components/EducationSection";
 import {AboutMeSection} from "@/components/AboutMe";
-import {FooterLink} from "@/components/FooterLink";
+import {FooterSection} from "@/components/FooterSection";
+import {githubFooter, linkedInFooter} from "@/util/footer";
 
 export default function Home() {
     return (
@@ -20,17 +21,7 @@ export default function Home() {
                 <EducationSection/>
             </main>
             <footer className={styles.footer} style={{paddingTop: 12}}>
-                <FooterLink
-                    text={strings.linkedIn}
-                    link={"https://www.linkedin.com/in/austinjwhite96/"}
-                    icon={"linkedin"}
-                />
-                <span>|</span>
-                <FooterLink
-                    text={strings.github}
-                    link={"https://github.com/endlessrequiem"}
-                    icon={"github"}
-                />
+                <FooterSection items={[linkedInFooter, githubFooter]}/>
             </footer>
         </div>
     );
