@@ -13,7 +13,7 @@ export const FooterLink: React.FC<FooterLinkProps> = ({text, link, icon}) => {
     const Icon = getIcon(icon);
 
     return (
-        <>
+        <div style={{display: "flex"}}>
             {Icon}
             <a
                 href={link}
@@ -22,17 +22,18 @@ export const FooterLink: React.FC<FooterLinkProps> = ({text, link, icon}) => {
             >
                 {text}
             </a>
-        </>
+        </div>
     )
 }
 
 function getIcon(icon: string) {
     const iconSize = 20;
+    const rightPadding = "5px";
 
     if (icon === "github") {
-        return <IoLogoGithub size={iconSize} style={{alignSelf: "center"}}/>;
+        return <IoLogoGithub size={iconSize} style={{alignSelf: "center", paddingRight: rightPadding}}/>;
     } else if (icon === "linkedin") {
-        return <FaLinkedin size={iconSize} style={{alignSelf: "center"}}/>;
+        return <FaLinkedin size={iconSize} style={{alignSelf: "center", paddingRight: rightPadding}}/>;
     } else {
         return null;
     }
