@@ -20,7 +20,8 @@ export const strings = {
         "Jest",
         "Retrofit",
         "Axios",
-        "Jotai"
+        "Jotai",
+        "React Hooks"
     ],
     experienceHeader: "Experience",
     companies: ["SmartRent"],
