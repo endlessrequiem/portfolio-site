@@ -35,6 +35,9 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ((current) => {
             border: "1px solid white",
             borderRadius: "10px",
             padding: "10px",
+            justifyContent: "space-between",
+            flex: 1,
+            textAlign: "center",
         }}>
             <h2>{projectName}</h2>
             <h4>{projectDescription}</h4>
