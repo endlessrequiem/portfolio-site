@@ -18,9 +18,9 @@ export default function Home() {
             <main className={styles.main}>
                 <PageHeader title={strings.header} subTitle={strings.subHeader}/>
                 <AboutMeSection title={strings.aboutMeTitle}/>
-                <SkillsSection title={strings.skillsHeader} listItems={strings.skills}/>
                 <ExperienceSection header={strings.experienceHeader} workExperience={workExperience}/>
                 <ProjectSection projects={projects}/>
+                <SkillsSection title={strings.skillsHeader} listItems={strings.skills}/>
                 <EducationSection/>
             </main>
             <footer className={styles.footer} style={{paddingTop: 12}}>

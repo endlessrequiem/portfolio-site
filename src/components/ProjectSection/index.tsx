@@ -12,13 +12,14 @@ type ProjectComponentProps = {
 export type Project = {
     projectName: string;
     projectDescription: string;
-    projectImage: string;
+    projectImages: string[];
 }
 
+//TODO Add title to strings
 export const ProjectSection: React.FC<ProjectSectionProps> = ({projects}: ProjectSectionProps) => {
     return (
         <>
-            <h2>Projects</h2>
+            <h2>Highlighted Projects</h2>
             {projects.map((project, index) => (
                 <ProjectComponent project={project} key={index}/>
             ))}
@@ -26,19 +27,33 @@ export const ProjectSection: React.FC<ProjectSectionProps> = ({projects}: Projec
     )
 }
 
-//TODO Update image styling
 const ProjectComponent: React.FC<ProjectComponentProps> = ((current) => {
-    const {projectName, projectDescription, projectImage} = current.project;
+    const {projectName, projectDescription, projectImages} = current.project;
 
     return (
-        <view style={{border: "1px solid white", borderRadius: "10px", padding: "10px"}}>
+        <view style={{
+            border: "1px solid white",
+            borderRadius: "10px",
+            padding: "10px",
+        }}>
             <h2>{projectName}</h2>
-            <span>{projectDescription}</span>
-            <img
-                src={projectImage}
-                alt="project"
-                style={{width: "25%"}}
-            />
+            <h4>{projectDescription}</h4>
+            {projectImages.map((image, index) => (
+                <img
+                    src={image}
+                    alt={projectName}
+                    key={index}
+                    style={{
+                        width: "33%",
+                        marginLeft: "10px",
+                        marginRight: "10px",
+                        marginTop: "10px",
+                        border: "1px solid white",
+                        borderRadius: "10px",
+                    }}
+                />
+            ))}
+
         </view>
     )
 })
