@@ -1,4 +1,5 @@
 import React from "react";
+import {strings} from "@/app/page.strings";
 
 type ProjectSectionProps = {
     projects: Project[];
@@ -15,11 +16,10 @@ export type Project = {
     projectImages: string[];
 }
 
-//TODO Add title to strings
 export const ProjectSection: React.FC<ProjectSectionProps> = ({projects}: ProjectSectionProps) => {
     return (
         <>
-            <h2>Highlighted Projects</h2>
+            <h2>{strings.projectsHeader}</h2>
             {projects.map((project, index) => (
                 <ProjectComponent project={project} key={index}/>
             ))}
