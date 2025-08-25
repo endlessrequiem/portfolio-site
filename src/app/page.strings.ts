@@ -23,6 +23,7 @@ export const strings = {
         "Jotai",
         "React Hooks",
         "Cursor",
+        "GitHub Copilot",
     ],
     experienceHeader: "Experience",
     companies: ["SmartRent"],
