@@ -19,7 +19,9 @@ export type Project = {
 export const ProjectSection: React.FC<ProjectSectionProps> = ({projects}: ProjectSectionProps) => {
     return (
         <>
-            <h2>{strings.projectsHeader}</h2>
+            <h2 className="section-header-blur" style={{
+                paddingLeft: "24px",
+            }}>{strings.projectsHeader}</h2>
             {projects.map((project, index) => (
                 <ProjectComponent project={project} key={index}/>
             ))}

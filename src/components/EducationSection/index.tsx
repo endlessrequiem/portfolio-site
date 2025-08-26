@@ -4,7 +4,9 @@ import {strings} from "@/app/page.strings";
 export const EducationSection: React.FC = () => {
     return (
         <>
-            <h2>{strings.educationHeader}</h2>
+            <h2 className="section-header-blur" style={{
+                paddingLeft: "24px",
+            }}>{strings.educationHeader}</h2>
             <view className="blur-effect" style={{
                 padding: "20px",
             }}>

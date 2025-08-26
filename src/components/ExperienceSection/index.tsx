@@ -17,7 +17,9 @@ export type Experience = {
 export const ExperienceSection: React.FC<ExperienceSectionProps> = ({header, workExperience}) => {
     return (
         <>
-            <h2>{header}</h2>
+            <h2 className="section-header-blur" style={{
+                paddingLeft: "24px",
+            }}>{header}</h2>
             {workExperience.map((item, index) => <ResumeCard key={index} {...item} />)}
         </>
     )

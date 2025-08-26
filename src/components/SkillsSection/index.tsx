@@ -10,7 +10,9 @@ type SkillsSectionProps = {
 export const SkillsSection: React.FC<SkillsSectionProps> = ({title, listItems}) => {
     return (
         <>
-            <h2>{title}</h2>
+            <h2 className="section-header-blur" style={{
+                paddingLeft: "24px",
+            }}>{title}</h2>
             <view className="blur-effect" style={{
                 padding: "20px",
                 columns: 3,
