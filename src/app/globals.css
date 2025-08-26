@@ -7,6 +7,7 @@
     --glass-border: rgba(255, 255, 255, 0.2);
     --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     --glass-backdrop: blur(4px);
+    margin-top: 36px;
 }
 
 html,
