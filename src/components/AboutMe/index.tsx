@@ -9,10 +9,8 @@ export const AboutMeSection: React.FC<AboutMeSectionProps> = ({title}) => {
     return (
         <>
             <h2>{title}</h2>
-            <view style={{
-                border: "1px solid white",
-                borderRadius: "10px",
-                padding: "15px",
+            <view className="blur-effect" style={{
+                padding: "20px",
                 textAlign: "left",
             }}>
                 {strings.aboutMeText}
