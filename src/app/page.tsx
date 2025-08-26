@@ -17,10 +17,15 @@ export default function Home() {
         <div className={styles.page}>
             <main className={styles.main}>
                 <PageHeader title={strings.header} subTitle={strings.subHeader}/>
+                <hr className={styles.divider}/>
                 <AboutMeSection title={strings.aboutMeTitle}/>
+                <hr className={styles.divider}/>
                 <ExperienceSection header={strings.experienceHeader} workExperience={workExperience}/>
+                <hr className={styles.divider}/>
                 <ProjectSection projects={projects}/>
+                <hr className={styles.divider}/>
                 <SkillsSection title={strings.skillsHeader} listItems={strings.skills}/>
+                <hr className={styles.divider}/>
                 <EducationSection/>
             </main>
             <footer className={styles.footer} style={{paddingTop: 12}}>

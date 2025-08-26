@@ -73,14 +73,36 @@ a {
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
-/* Header Text Glow Effect */
+/* Header Text */
 h2 {
-  text-shadow: 
-    0 0 10px rgba(152, 255, 152, 0.8),
-    0 0 20px rgba(144, 238, 144, 0.6),
-    0 0 30px rgba(50, 205, 50, 0.4);
   color: #ffffff;
   font-weight: 600;
+}
+
+/* Section Headers with Blur Effect */
+.section-header-blur {
+  background: var(--glass-background);
+  backdrop-filter: var(--glass-backdrop);
+  -webkit-backdrop-filter: var(--glass-backdrop);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  box-shadow: var(--glass-shadow);
+  padding: 8px 16px;
+  margin: 8px 0;
+  display: inline-block;
+  position: relative;
+}
+
+.section-header-blur::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  z-index: -1;
 }
 
 html {
