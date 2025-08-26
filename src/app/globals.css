@@ -18,7 +18,7 @@ body {
 
 body {
   color: var(--foreground);
-  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+  background: linear-gradient(180deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
   background-attachment: fixed;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;

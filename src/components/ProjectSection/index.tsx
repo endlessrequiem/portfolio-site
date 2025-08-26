@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import {strings} from "@/app/page.strings";
 
 type ProjectSectionProps = {
@@ -8,7 +10,6 @@ type ProjectSectionProps = {
 type ProjectComponentProps = {
     project: Project;
 }
-
 
 export type Project = {
     projectName: string;
@@ -31,6 +32,11 @@ export const ProjectSection: React.FC<ProjectSectionProps> = ({projects}: Projec
 
 const ProjectComponent: React.FC<ProjectComponentProps> = ((current) => {
     const {projectName, projectDescription, projectImages} = current.project;
+    const [expandedImage, setExpandedImage] = useState<number | null>(null);
+
+    const handleImageClick = (index: number) => {
+        setExpandedImage(expandedImage === index ? null : index);
+    };
 
     return (
         <view className="blur-effect" style={{
@@ -48,15 +54,30 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ((current) => {
                     key={index}
                     className="blur-effect"
                     style={{
-                        width: "33%",
+                        width: expandedImage === index ? "80%" : "33%",
                         marginLeft: "10px",
                         marginRight: "10px",
-                        marginTop: "10px",
+                        marginTop: expandedImage === index ? "48px" : "10px",
+                        marginBottom: "48px",
                         padding: "5px",
+                        cursor: "pointer",
+                        transition: "all 0.3s ease-in-out",
+                        zIndex: expandedImage === index ? 10 : 1,
+                        position: expandedImage === index ? "relative" : "static",
+                    }}
+                    onClick={() => handleImageClick(index)}
+                    onMouseEnter={(e) => {
+                        if (expandedImage !== index) {
+                            e.currentTarget.style.transform = "scale(1.05)";
+                        }
+                    }}
+                    onMouseLeave={(e) => {
+                        if (expandedImage !== index) {
+                            e.currentTarget.style.transform = "scale(1)";
+                        }
                     }}
                 />
             ))}
-
         </view>
     )
 })
