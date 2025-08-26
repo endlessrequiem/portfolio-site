@@ -11,10 +11,8 @@ export const SkillsSection: React.FC<SkillsSectionProps> = ({title, listItems}) 
     return (
         <>
             <h2>{title}</h2>
-            <view style={{
-                border: "1px solid white",
-                borderRadius: "10px",
-                padding: "15px",
+            <view className="blur-effect" style={{
+                padding: "20px",
                 columns: 3,
                 alignItems: "center",
             }}>

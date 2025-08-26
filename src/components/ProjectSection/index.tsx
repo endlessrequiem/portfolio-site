@@ -31,10 +31,8 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ((current) => {
     const {projectName, projectDescription, projectImages} = current.project;
 
     return (
-        <view style={{
-            border: "1px solid white",
-            borderRadius: "10px",
-            padding: "10px",
+        <view className="blur-effect" style={{
+            padding: "20px",
             justifyContent: "space-between",
             flex: 1,
             textAlign: "center",
@@ -46,13 +44,13 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ((current) => {
                     src={image}
                     alt={projectName}
                     key={index}
+                    className="blur-effect"
                     style={{
                         width: "33%",
                         marginLeft: "10px",
                         marginRight: "10px",
                         marginTop: "10px",
-                        border: "1px solid white",
-                        borderRadius: "10px",
+                        padding: "5px",
                     }}
                 />
             ))}

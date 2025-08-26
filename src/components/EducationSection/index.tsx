@@ -5,10 +5,8 @@ export const EducationSection: React.FC = () => {
     return (
         <>
             <h2>{strings.educationHeader}</h2>
-            <view style={{
-                border: "1px solid white",
-                borderRadius: "10px",
-                padding: "10px",
+            <view className="blur-effect" style={{
+                padding: "20px",
             }}>
                 <div style={{
                     display: "flex",

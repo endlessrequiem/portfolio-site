@@ -13,12 +13,21 @@ export const FooterLink: React.FC<FooterLinkProps> = ({text, link, icon}) => {
     const Icon = getIcon(icon);
 
     return (
-        <div style={{display: "flex"}}>
+        <div 
+            className="blur-effect footer-link-hover" 
+            style={{
+                display: "flex", 
+                padding: "10px",
+                transition: "all 0.3s ease",
+                cursor: "pointer"
+            }}
+        >
             {Icon}
             <a
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
+                style={{transition: "all 0.3s ease"}}
             >
                 {text}
             </a>
