@@ -37,7 +37,7 @@
 .main span {
     font-family: var(--font-geist-mono);
     padding-left: 0;
-    margin: 12px;
+    margin: 0px;
     font-size: 14px;
     line-height: 24px;
     letter-spacing: -0.01em;
