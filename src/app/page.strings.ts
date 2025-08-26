@@ -52,7 +52,7 @@ export const strings = {
     university: "California State University, Stanislaus",
     classOf: "Class of 2020",
     degree: "Bachelor of Arts in English",
-    extracurriculars: "Extracurriculars:",
+    extracurriculars: "Extracurriculars",
     activities: ["Computer Science Club (President)", "StanHacks (Founder, Director)"],
     linkedIn: "LinkedIn",
     github: "GitHub",
