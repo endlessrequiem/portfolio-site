@@ -24,6 +24,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }
 
 * {
@@ -77,6 +78,7 @@ a {
 h2 {
   color: #ffffff;
   font-weight: 600;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
 }
 
 /* Section Headers with Blur Effect */
