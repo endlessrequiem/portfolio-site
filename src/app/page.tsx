@@ -22,11 +22,18 @@ export default function Home() {
                 <hr className={styles.divider}/>
                 <ExperienceSection header={strings.experienceHeader} workExperience={workExperience}/>
                 <hr className={styles.divider}/>
-                <ProjectSection projects={projects}/>
+                <ProjectSection projects={projects} sectionTitle={strings.projectsHeader}/>
                 <hr className={styles.divider}/>
                 <SkillsSection title={strings.skillsHeader} listItems={strings.skills}/>
                 <hr className={styles.divider}/>
-                <EducationSection/>
+                <EducationSection
+                    sectionTitle={strings.educationHeader}
+                    university={strings.university}
+                    classOf={strings.classOf}
+                    degree={strings.degree}
+                    extracurricularsTitle={strings.extracurriculars}
+                    activities={strings.activities}
+                />
             </main>
             <footer className={styles.footer} style={{paddingTop: 12}}>
                 <FooterSection items={[linkedInFooter, githubFooter]}/>

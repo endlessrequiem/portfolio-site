@@ -1,15 +1,28 @@
-"use client";
 import React from "react";
 import {strings} from "@/app/page.strings";
 import {Pill} from "@/components/Pill";
+import {SectionHeader} from "@/components/SectionHeader";
 
-export const EducationSection: React.FC = () => {
+export type EducationSectionProps = {
+    sectionTitle: string;
+    university: string;
+    classOf: string;
+    degree: string;
+    extracurricularsTitle: string;
+    activities: string[];
+}
+
+export const EducationSection: React.FC<EducationSectionProps> = ({
+                                                                      sectionTitle,
+                                                                      university,
+                                                                      classOf,
+                                                                      degree,
+                                                                      extracurricularsTitle,
+                                                                      activities,
+                                                                  }) => {
     return (
         <>
-            <h2 className="section-header-blur" style={{
-                paddingLeft: "24px",
-                paddingRight: "24px",
-            }}>{strings.educationHeader}</h2>
+            <SectionHeader title={sectionTitle}/>
             <div className="liquid-glass" style={{
                 padding: "24px",
             }}>
@@ -31,8 +44,8 @@ export const EducationSection: React.FC = () => {
                             fontWeight: "600",
                             color: "#ffffff",
                             margin: "0"
-                        }}>{strings.university}</h2>
-                        <Pill text={strings.classOf}/>
+                        }}>{university}</h2>
+                        <Pill text={classOf}/>
                     </div>
                     <h3 style={{
                         fontSize: "16px",
@@ -40,7 +53,7 @@ export const EducationSection: React.FC = () => {
                         color: "rgba(255, 255, 255, 0.9)",
                         margin: "0",
                         fontFamily: "var(--font-geist-mono)"
-                    }}>{strings.degree}</h3>
+                    }}>{degree}</h3>
                 </div>
 
                 {/* Extracurriculars Section */}
@@ -51,13 +64,13 @@ export const EducationSection: React.FC = () => {
                         color: "#ffffff",
                         margin: "0 0 16px 0",
                         fontFamily: "var(--font-geist-mono)"
-                    }}>{strings.extracurriculars}</h4>
+                    }}>{extracurricularsTitle}</h4>
                     <div style={{
                         display: "flex",
                         flexDirection: "row",
                         gap: "12px"
                     }}>
-                        {strings.activities.map((item, index) => (
+                        {activities.map((item, index) => (
                             <Pill text={item} index={index} key={index}/>
                         ))}
                     </div>
