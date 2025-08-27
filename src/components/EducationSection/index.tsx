@@ -1,5 +1,4 @@
 import React from "react";
-import {strings} from "@/app/page.strings";
 import {Pill} from "@/components/Pill";
 import {SectionHeader} from "@/components/SectionHeader";
 
