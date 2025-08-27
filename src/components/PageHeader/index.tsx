@@ -1,7 +1,5 @@
 import React from "react";
 import {Pill} from "@/components/Pill";
-import {strings} from "@/app/page.strings";
-
 
 type PageHeaderProps = {
     title: string;
