@@ -3,7 +3,7 @@ import React from "react";
 
 export type PillProps = {
     text: string;
-    index: number;
+    index?: number;
 }
 
 export const Pill: React.FC<PillProps> = ({text, index}) => {

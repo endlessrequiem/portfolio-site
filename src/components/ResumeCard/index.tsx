@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import {Pill} from "@/components/Pill";
 
 type ResumeCardProps = {
     title: string;
@@ -55,37 +56,7 @@ export const ResumeCard: React.FC<ResumeCardProps> = ({title, company, listItems
                 gap: "12px"
             }}>
                 {listItems.map((item, index) => (
-                    <div
-                        key={index}
-                        style={{
-                            display: "flex",
-                            alignItems: "flex-start",
-                            gap: "12px",
-                            padding: "12px",
-                            background: "rgba(255, 255, 255, 0.03)",
-                            border: "1px solid rgba(255, 255, 255, 0.08)",
-                            borderRadius: "8px",
-                            transition: "all 0.2s ease-in-out"
-                        }}
-                    >
-                        <div style={{
-                            width: "6px",
-                            height: "6px",
-                            background: "rgba(255, 255, 255, 0.6)",
-                            borderRadius: "50%",
-                            marginTop: "8px",
-                            flexShrink: 0
-                        }}/>
-                        <p style={{
-                            fontSize: "14px",
-                            lineHeight: "1.5",
-                            color: "rgba(255, 255, 255, 0.9)",
-                            margin: "0",
-                            fontFamily: "var(--font-geist-mono)"
-                        }}>
-                            {item}
-                        </p>
-                    </div>
+                    <Pill text={item} index={index} key={index}/>
                 ))}
             </div>
         </div>

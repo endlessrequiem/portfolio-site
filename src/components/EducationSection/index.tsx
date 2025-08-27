@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import {strings} from "@/app/page.strings";
+import {Pill} from "@/components/Pill";
 
 export const EducationSection: React.FC = () => {
     return (
@@ -31,15 +32,7 @@ export const EducationSection: React.FC = () => {
                             color: "#ffffff",
                             margin: "0"
                         }}>{strings.university}</h2>
-                        <span style={{
-                            fontSize: "14px",
-                            color: "rgba(255, 255, 255, 0.8)",
-                            fontFamily: "var(--font-geist-mono)",
-                            padding: "4px 12px",
-                            background: "rgba(255, 255, 255, 0.1)",
-                            borderRadius: "12px",
-                            border: "1px solid rgba(255, 255, 255, 0.2)"
-                        }}>{strings.classOf}</span>
+                        <Pill text={strings.classOf}/>
                     </div>
                     <h3 style={{
                         fontSize: "16px",
@@ -61,25 +54,11 @@ export const EducationSection: React.FC = () => {
                     }}>{strings.extracurriculars}</h4>
                     <div style={{
                         display: "flex",
-                        flexDirection: "column",
+                        flexDirection: "row",
                         gap: "12px"
                     }}>
                         {strings.activities.map((item, index) => (
-                            <div
-                                key={index}
-                                style={{
-                                    background: "rgba(255, 255, 255, 0.05)",
-                                    border: "1px solid rgba(255, 255, 255, 0.1)",
-                                    borderRadius: "8px",
-                                    padding: "12px 16px",
-                                    fontSize: "14px",
-                                    fontFamily: "var(--font-geist-mono)",
-                                    color: "rgba(255, 255, 255, 0.9)",
-                                    transition: "all 0.2s ease-in-out"
-                                }}
-                            >
-                                {item}
-                            </div>
+                            <Pill text={item} index={index} key={index}/>
                         ))}
                     </div>
                 </div>
