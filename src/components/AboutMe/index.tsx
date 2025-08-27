@@ -11,7 +11,7 @@ export const AboutMeSection: React.FC<AboutMeSectionProps> = ({title}) => {
             <h2 className="section-header-blur" style={{
                 paddingLeft: "24px",
             }}>{title}</h2>
-            <view className="blur-effect" style={{
+            <view className="liquid-glass" style={{
                 padding: "20px",
                 textAlign: "left",
             }}>

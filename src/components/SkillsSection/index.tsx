@@ -14,7 +14,7 @@ export const SkillsSection: React.FC<SkillsSectionProps> = ({title, listItems}) 
                 paddingLeft: "24px",
                 marginBottom: "24px",
             }}>{title}</h2>
-            <div className="blur-effect" style={{
+            <div className="liquid-glass" style={{
                 padding: "24px",
                 display: "flex",
                 flexWrap: "wrap",

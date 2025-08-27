@@ -10,7 +10,7 @@ type ResumeCardProps = {
 
 export const ResumeCard: React.FC<ResumeCardProps> = ({title, company, listItems}) => {
     return (
-        <div className="blur-effect" style={{
+        <div className="liquid-glass" style={{
             padding: "24px",
             marginBottom: "16px",
             position: "relative"
@@ -43,7 +43,7 @@ export const ResumeCard: React.FC<ResumeCardProps> = ({title, company, listItems
                             color: "rgba(255, 255, 255, 0.8)",
                             fontFamily: "var(--font-geist-mono)"
                         }}>@ {company}</span>
-            
+
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@ export const ResumeCard: React.FC<ResumeCardProps> = ({title, company, listItems
                             borderRadius: "50%",
                             marginTop: "8px",
                             flexShrink: 0
-                        }} />
+                        }}/>
                         <p style={{
                             fontSize: "14px",
                             lineHeight: "1.5",

@@ -13,10 +13,10 @@ export const FooterLink: React.FC<FooterLinkProps> = ({text, link, icon}) => {
     const Icon = getIcon(icon);
 
     return (
-        <div 
-            className="blur-effect footer-link-hover" 
+        <div
+            className="liquid-glass footer-link-hover"
             style={{
-                display: "flex", 
+                display: "flex",
                 padding: "10px",
                 transition: "all 0.3s ease",
                 cursor: "pointer"

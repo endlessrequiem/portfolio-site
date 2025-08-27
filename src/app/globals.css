@@ -38,8 +38,7 @@ a {
     text-decoration: none;
 }
 
-/* Blur Effect */
-.blur-effect {
+.liquid-glass {
     background: var(--glass-background);
     backdrop-filter: var(--glass-backdrop);
     -webkit-backdrop-filter: var(--glass-backdrop);
@@ -49,7 +48,7 @@ a {
     position: relative;
 }
 
-.blur-effect::before {
+.liquid-glass::before {
     content: '';
     position: absolute;
     top: 0;

@@ -8,7 +8,7 @@ export const EducationSection: React.FC = () => {
             <h2 className="section-header-blur" style={{
                 paddingLeft: "24px",
             }}>{strings.educationHeader}</h2>
-            <div className="blur-effect" style={{
+            <div className="liquid-glass" style={{
                 padding: "24px",
             }}>
                 {/* University and Degree Section */}

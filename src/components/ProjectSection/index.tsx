@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, {useState} from "react";
 import {strings} from "@/app/page.strings";
 
 type ProjectSectionProps = {
@@ -79,7 +79,7 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ((current) => {
     }, [expandedImage, isTransitioning]);
 
     return (
-        <view className="blur-effect" style={{
+        <view className="liquid-glass" style={{
             padding: "20px",
             justifyContent: "space-between",
             flex: 1,
@@ -93,7 +93,7 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ((current) => {
                     src={image}
                     alt={projectName}
                     key={index}
-                    className="blur-effect"
+                    className="liquid-glass"
                     style={{
                         width: expandedImage === index ? "80%" : "33%",
                         marginLeft: "10px",
@@ -110,8 +110,8 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ((current) => {
                         maxHeight: expandedImage === index ? "80vh" : "auto",
                         objectFit: expandedImage === index ? "contain" : "cover",
                         opacity: expandedImage === index ? (isTransitioning ? 0.3 : 1) : 1,
-                        transition: expandedImage === index 
-                            ? "all 0.3s ease-in-out, opacity 0.15s ease-in-out" 
+                        transition: expandedImage === index
+                            ? "all 0.3s ease-in-out, opacity 0.15s ease-in-out"
                             : "all 0.3s ease-in-out",
                     }}
                     onClick={() => handleImageClick(index)}
@@ -157,8 +157,8 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ((current) => {
                                 top: "50%",
                                 transform: "translateY(-50%)",
                                 zIndex: 1001,
-                                background: isTransitioning 
-                                    ? "rgba(255, 255, 255, 0.1)" 
+                                background: isTransitioning
+                                    ? "rgba(255, 255, 255, 0.1)"
                                     : "rgba(255, 255, 255, 0.2)",
                                 border: "none",
                                 borderRadius: "50%",
@@ -201,8 +201,8 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ((current) => {
                                 top: "50%",
                                 transform: "translateY(-50%)",
                                 zIndex: 1001,
-                                background: isTransitioning 
-                                    ? "rgba(255, 255, 255, 0.1)" 
+                                background: isTransitioning
+                                    ? "rgba(255, 255, 255, 0.1)"
                                     : "rgba(255, 255, 255, 0.2)",
                                 border: "none",
                                 borderRadius: "50%",
