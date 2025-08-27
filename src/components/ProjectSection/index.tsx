@@ -1,7 +1,6 @@
 "use client";
 
 import React, {useState} from "react";
-import {strings} from "@/app/page.strings";
 import {SectionHeader} from "@/components/SectionHeader";
 import {Pill} from "@/components/Pill";
 
