@@ -32,8 +32,6 @@ export const Pill: React.FC<PillProps> = ({text, index, textSize}) => {
                     color: "#ffffff",
                     cursor: "default",
                     transition: "all 0.2s ease-in-out",
-                    backdropFilter: "blur(10px)",
-                    WebkitBackdropFilter: "blur(10px)",
                     userSelect: "none",
                 }}
             >
