@@ -74,6 +74,10 @@ a {
 }
 
 /* Header Text */
+div,
+h3,
+h1,
+span,
 h2 {
     color: #ffffff;
     font-weight: 600;
@@ -107,5 +111,5 @@ h2 {
 }
 
 html {
-    color-scheme: light;
+    color-scheme: dark;
 }
