@@ -10,6 +10,7 @@ export const AboutMeSection: React.FC<AboutMeSectionProps> = ({title}) => {
         <>
             <h2 className="section-header-blur" style={{
                 paddingLeft: "24px",
+                paddingRight: "24px",
             }}>{title}</h2>
             <view className="liquid-glass" style={{
                 padding: "20px",

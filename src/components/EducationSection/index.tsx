@@ -7,6 +7,7 @@ export const EducationSection: React.FC = () => {
         <>
             <h2 className="section-header-blur" style={{
                 paddingLeft: "24px",
+                paddingRight: "24px",
             }}>{strings.educationHeader}</h2>
             <div className="liquid-glass" style={{
                 padding: "24px",
