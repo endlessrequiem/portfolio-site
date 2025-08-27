@@ -1,5 +1,6 @@
 import React from "react";
 import {ResumeCard} from "@/components/ResumeCard";
+import {SectionHeader} from "@/components/SectionHeader";
 
 
 type ExperienceSectionProps = {
@@ -17,10 +18,7 @@ export type Experience = {
 export const ExperienceSection: React.FC<ExperienceSectionProps> = ({header, workExperience}) => {
     return (
         <>
-            <h2 className="section-header-blur" style={{
-                paddingLeft: "24px",
-                paddingRight: "24px",
-            }}>{header}</h2>
+            <SectionHeader title={header}/>
             {workExperience.map((item, index) => <ResumeCard key={index} {...item} />)}
         </>
     )

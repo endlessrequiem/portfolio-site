@@ -2,8 +2,11 @@
 
 import React, {useState} from "react";
 import {strings} from "@/app/page.strings";
+import {SectionHeader} from "@/components/SectionHeader";
+import {Pill} from "@/components/Pill";
 
 type ProjectSectionProps = {
+    sectionTitle: string;
     projects: Project[];
 }
 
@@ -17,12 +20,10 @@ export type Project = {
     projectImages: string[];
 }
 
-export const ProjectSection: React.FC<ProjectSectionProps> = ({projects}: ProjectSectionProps) => {
+export const ProjectSection: React.FC<ProjectSectionProps> = ({projects, sectionTitle}: ProjectSectionProps) => {
     return (
         <>
-            <h2 className="section-header-blur" style={{
-                paddingLeft: "24px",
-            }}>{strings.projectsHeader}</h2>
+            <SectionHeader title={sectionTitle}/>
             {projects.map((project, index) => (
                 <ProjectComponent project={project} key={index}/>
             ))}
@@ -86,8 +87,8 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ((current) => {
             textAlign: "center",
             position: "relative",
         }}>
-            <h2 style={{marginBottom: "12px"}}>{projectName}</h2>
-            <h4 style={{marginBottom: "18px"}}>{projectDescription}</h4>
+            <Pill text={projectName} textSize={"large"}/>
+            <h4 style={{marginBottom: "18px", marginTop: "18px"}}>{projectDescription}</h4>
             {projectImages.map((image, index) => (
                 <img
                     src={image}

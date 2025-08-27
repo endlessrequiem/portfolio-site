@@ -1,5 +1,6 @@
 import React from "react";
 import {strings} from "@/app/page.strings";
+import {SectionHeader} from "@/components/SectionHeader";
 
 type AboutMeSectionProps = {
     title: string;
@@ -8,10 +9,7 @@ type AboutMeSectionProps = {
 export const AboutMeSection: React.FC<AboutMeSectionProps> = ({title}) => {
     return (
         <>
-            <h2 className="section-header-blur" style={{
-                paddingLeft: "24px",
-                paddingRight: "24px",
-            }}>{title}</h2>
+            <SectionHeader title={title}/>
             <view className="liquid-glass" style={{
                 padding: "20px",
                 textAlign: "left",

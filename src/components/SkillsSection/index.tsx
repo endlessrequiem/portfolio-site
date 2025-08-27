@@ -2,6 +2,7 @@
 
 import React from "react";
 import {Pill} from "@/components/Pill";
+import {SectionHeader} from "@/components/SectionHeader";
 
 type SkillsSectionProps = {
     title: string;
@@ -11,11 +12,7 @@ type SkillsSectionProps = {
 export const SkillsSection: React.FC<SkillsSectionProps> = ({title, listItems}) => {
     return (
         <>
-            <h2 className="section-header-blur" style={{
-                paddingLeft: "24px",
-                paddingRight: "24px",
-                marginBottom: "24px",
-            }}>{title}</h2>
+            <SectionHeader title={title}/>
             <div className="liquid-glass" style={{
                 padding: "24px",
                 display: "flex",
