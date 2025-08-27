@@ -86,8 +86,8 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ((current) => {
             textAlign: "center",
             position: "relative",
         }}>
-            <h2>{projectName}</h2>
-            <h4>{projectDescription}</h4>
+            <h2 style={{marginBottom: "12px"}}>{projectName}</h2>
+            <h4 style={{marginBottom: "18px"}}>{projectDescription}</h4>
             {projectImages.map((image, index) => (
                 <img
                     src={image}

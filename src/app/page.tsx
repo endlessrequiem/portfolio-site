@@ -16,7 +16,7 @@ export default function Home() {
     return (
         <div className={styles.page}>
             <main className={styles.main}>
-                <PageHeader title={strings.header} subTitle={strings.subHeader}/>
+                <PageHeader title={strings.header} subTitle={strings.jobTitle} content={strings.subHeader}/>
                 <hr className={styles.divider}/>
                 <AboutMeSection title={strings.aboutMeTitle}/>
                 <hr className={styles.divider}/>
