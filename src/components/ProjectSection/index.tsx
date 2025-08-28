@@ -128,7 +128,7 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ((current) => {
                     alt={projectName}
                     key={index}
                     className="liquid-glass"
-                    // @ts-expect-error
+                    // @ts-expect-error: style is compatible
                     style={expandedImage === index ? expandedImageStyle : imageStyle}
                     width={imageWidth}
                     height={imageHeight}
