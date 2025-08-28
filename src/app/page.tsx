@@ -4,13 +4,13 @@ import {PageHeader} from "@/components/PageHeader";
 import {SkillsSection} from "@/components/SkillsSection";
 import React from "react";
 import {ExperienceSection} from "@/components/ExperienceSection";
-import {workExperience} from "@/util/experience";
+import {workExperience} from "@/const/experience";
 import {EducationSection} from "@/components/EducationSection";
 import {AboutMeSection} from "@/components/AboutMe";
 import {FooterSection} from "@/components/FooterSection";
-import {githubFooter, linkedInFooter} from "@/util/footer";
+import {githubFooter, linkedInFooter} from "@/const/footer";
 import {ProjectSection} from "@/components/ProjectSection";
-import {projects} from "@/util/projects";
+import {projects} from "@/const/projects";
 
 export default function Home() {
     return (

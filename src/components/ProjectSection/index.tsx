@@ -3,6 +3,7 @@
 import React, {useState} from "react";
 import {SectionHeader} from "@/components/SectionHeader";
 import {Pill} from "@/components/Pill";
+import Image from "next/image";
 
 type ProjectSectionProps = {
     sectionTitle: string;
@@ -18,6 +19,8 @@ export type Project = {
     projectDescription: string;
     projectImages: string[];
 }
+
+const DELAY_TIME = 100;
 
 export const ProjectSection: React.FC<ProjectSectionProps> = ({projects, sectionTitle}: ProjectSectionProps) => {
     return (
@@ -39,13 +42,17 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ((current) => {
         setExpandedImage(expandedImage === index ? null : index);
     };
 
+    const handleTransition = (newExpandedImage: number) => {
+        setExpandedImage(newExpandedImage);
+        setTimeout(() => setIsTransitioning(false), DELAY_TIME);
+    }
+
     const goToPreviousImage = () => {
         if (expandedImage !== null && expandedImage > 0 && !isTransitioning) {
             setIsTransitioning(true);
             setTimeout(() => {
-                setExpandedImage(expandedImage - 1);
-                setTimeout(() => setIsTransitioning(false), 150);
-            }, 150);
+                handleTransition(expandedImage - 1)
+            }, DELAY_TIME);
         }
     };
 
@@ -53,9 +60,8 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ((current) => {
         if (expandedImage !== null && expandedImage < projectImages.length - 1 && !isTransitioning) {
             setIsTransitioning(true);
             setTimeout(() => {
-                setExpandedImage(expandedImage + 1);
-                setTimeout(() => setIsTransitioning(false), 150);
-            }, 150);
+                handleTransition(expandedImage + 1)
+            }, DELAY_TIME);
         }
     };
 
@@ -78,6 +84,34 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ((current) => {
         };
     }, [expandedImage, isTransitioning]);
 
+    const imageWidth = 800;
+    const imageHeight = 600;
+
+    const imageStyle = {
+        width: "33%",
+        marginLeft: "10px",
+        marginRight: "10px",
+        marginTop: "10px",
+        marginBottom: "48px",
+        padding: "5px",
+        cursor: "pointer",
+        objectFit: "cover",
+        transition: "all 0.3s ease-in-out",
+    };
+
+    const expandedImageStyle = {
+        width: "80%",
+        zIndex: 1000,
+        position: "fixed",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        maxHeight: "80vh",
+        objectFit: "contain",
+        opacity: isTransitioning ? 0.3 : 1,
+        transition: "all 0.3s ease-in-out, opacity 0.15s ease-in-out",
+    };
+
     return (
         <view className="liquid-glass" style={{
             padding: "20px",
@@ -89,31 +123,15 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ((current) => {
             <Pill text={projectName} textSize={"large"}/>
             <h4 style={{marginBottom: "18px", marginTop: "18px"}}>{projectDescription}</h4>
             {projectImages.map((image, index) => (
-                <img
+                <Image
                     src={image}
                     alt={projectName}
                     key={index}
                     className="liquid-glass"
-                    style={{
-                        width: expandedImage === index ? "80%" : "33%",
-                        marginLeft: "10px",
-                        marginRight: "10px",
-                        marginTop: "10px",
-                        marginBottom: "48px",
-                        padding: "5px",
-                        cursor: "pointer",
-                        zIndex: expandedImage === index ? 1000 : 1,
-                        position: expandedImage === index ? "fixed" : "static",
-                        top: expandedImage === index ? "50%" : "auto",
-                        left: expandedImage === index ? "50%" : "auto",
-                        transform: expandedImage === index ? "translate(-50%, -50%)" : "none",
-                        maxHeight: expandedImage === index ? "80vh" : "auto",
-                        objectFit: expandedImage === index ? "contain" : "cover",
-                        opacity: expandedImage === index ? (isTransitioning ? 0.3 : 1) : 1,
-                        transition: expandedImage === index
-                            ? "all 0.3s ease-in-out, opacity 0.15s ease-in-out"
-                            : "all 0.3s ease-in-out",
-                    }}
+                    // @ts-ignore
+                    style={expandedImage === index ? expandedImageStyle : imageStyle}
+                    width={imageWidth}
+                    height={imageHeight}
                     onClick={() => handleImageClick(index)}
                     onMouseEnter={(e) => {
                         if (expandedImage !== index) {
