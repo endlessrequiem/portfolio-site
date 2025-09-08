@@ -5,7 +5,7 @@
     --gradient-end: #34A853;
     --glass-background: rgba(255, 255, 255, 0.15);
     --glass-border: rgba(255, 255, 255, 0.2);
-    --glass-shadow: 0 4px 16px 4px rgba(255, 255, 255, 0.1);;
+    --glass-shadow: 0 4px 16px 4px rgba(255, 255, 255, 0.1);
     --glass-backdrop: blur(4px);
     margin-top: 36px;
 }
@@ -62,10 +62,9 @@ a {
 
 /* Footer Link Hover Effect */
 .footer-link-hover:hover {
-    background: rgba(255, 255, 255, 0.25);
     border-color: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
-    transform: translateY(-2px);
+    box-shadow: 0 12px 40px 0 rgba(255, 255, 255, 0.1);
+    transform: translateY(-4px);
 }
 
 .footer-link-hover:hover a {
