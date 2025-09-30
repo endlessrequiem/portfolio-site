@@ -8,12 +8,6 @@ export default defineConfig(({command}) => ({
             ignoredRouteFiles: ["**/.*"],
             ssr: false,
             basename: "/portfolio-site/",
-            buildEnd: async (ctx) => {
-                if (ctx.config.isSsr) return;
-
-                // This tells Remix to create an index.html file in your build/client folder.
-                await ctx.createViteManifest();
-            },
         }),
     ],
     resolve: {
