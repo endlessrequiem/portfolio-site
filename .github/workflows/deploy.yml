@@ -36,8 +36,16 @@ jobs:
       - name: Build
         run: yarn build
 
-      - name: Clean up symlinks
-        run: find build/client -type l -delete || true
+      - name: Install ImageMagick and pngcrush
+        # These tools are often pre-installed, but this ensures they are available
+        run: sudo apt-get update && sudo apt-get install -y imagemagick pngcrush
+
+      - name: Optimize PNGs and Strip Metadata
+        run: |
+          # Strips all metadata/optimizations using ImageMagick 'mogrify -strip'
+          find build/client -name "*.png" -exec mogrify -strip -quality 80 {} \; || true
+          # Runs pngcrush for final optimization
+          find build/client -name "*.png" -exec pngcrush -ow -c 0 -rem all {} \; || true
 
       - name: Set correct permissions
         run: chmod -R a+rX build/client
