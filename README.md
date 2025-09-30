@@ -4,7 +4,8 @@ A modern, responsive portfolio website built with Remix and featuring a beautifu
 
 ## 🚀 Live Site
 
-Visit the live site at: [https://endlessrequiem.github.io/portfolio-site](https://endlessrequiem.github.io/portfolio-site)
+Visit the live site
+at: [https://endlessrequiem.github.io/portfolio-site](https://endlessrequiem.github.io/portfolio-site)
 
 ## 🛠️ Tech Stack
 
@@ -14,15 +15,6 @@ Visit the live site at: [https://endlessrequiem.github.io/portfolio-site](https:
 - **Styling**: CSS with glassmorphism effects
 - **Icons**: React Icons
 - **Deployment**: GitHub Pages
-
-## ✨ Features
-
-- **Responsive Design**: Works perfectly on desktop and mobile
-- **Interactive Image Gallery**: Click to expand project images with navigation
-- **Glassmorphism UI**: Modern glass-like design with backdrop blur effects
-- **Keyboard Navigation**: Full keyboard support for image gallery
-- **Smooth Animations**: Beautiful transitions and hover effects
-- **Static Site Generation**: Optimized for fast loading
 
 ## 🏗️ Development
 
@@ -45,7 +37,7 @@ yarn install
 yarn dev
 ```
 
-The site will be available at `http://localhost:5173`
+The site will be available at `http://localhost:5173/portfolio-site/`
 
 ### Available Scripts
 
@@ -60,7 +52,8 @@ The site will be available at `http://localhost:5173`
 
 ### Automatic Deployment (GitHub Actions)
 
-The site is automatically deployed to GitHub Pages when you push to the `main` or `master` branch. The GitHub Actions workflow will:
+The site is automatically deployed to GitHub Pages when you push to the `main` or `master` branch. The GitHub Actions
+workflow will:
 
 1. Build the Remix application
 2. Deploy the static files to GitHub Pages
