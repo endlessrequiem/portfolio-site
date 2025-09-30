@@ -37,7 +37,7 @@ jobs:
         run: yarn build
 
       - name: Clean up links and permissions
-        run: find build -type l -delete; find build -type h -delete; chmod -R a+rX build
+        run: find build -type l -delete || true
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
