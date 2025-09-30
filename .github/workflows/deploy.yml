@@ -31,13 +31,11 @@ jobs:
       - name: Build
         run: yarn build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build/client
-          cname: # Optional: add your custom domain here
+          name: github-pages
+          path: build/
 
   deploy:
     environment:
