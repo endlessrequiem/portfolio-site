@@ -7,7 +7,6 @@ export default defineConfig(({command}) => ({
         remix({
             ignoredRouteFiles: ["**/.*"],
             ssr: false,
-            basename: "/portfolio-site/",
         }),
     ],
     resolve: {
@@ -20,7 +19,6 @@ export default defineConfig(({command}) => ({
             localsConvention: "camelCase",
         },
     },
-    base: command === "build" ? "/portfolio-site/" : "/",
     build: {
         outDir: "build",
         emptyOutDir: true,
