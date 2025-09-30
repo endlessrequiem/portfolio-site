@@ -5,6 +5,7 @@ import path from "path";
 export default defineConfig(({command}) => ({
     plugins: [
         remix({
+            
             ignoredRouteFiles: ["**/.*"],
             ssr: false,
             basename: "/portfolio-site/",
@@ -22,7 +23,7 @@ export default defineConfig(({command}) => ({
     },
     base: "./",
     build: {
-        outDir: "build",
+        outDir: "build/client",
         emptyOutDir: true,
     },
 }));

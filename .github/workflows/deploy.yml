@@ -32,26 +32,17 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Prune old build directory
-        run: rm -rf build || true
-
       - name: Build
         run: yarn build
 
-      - name: Clean up symlinks
-        run: find build -type l -delete || true
-
       - name: Set correct permissions
-        run: chmod -R a+rX build
-
-      - name: Build (SPA Mode)
-        run: yarn build
+        run: chmod -R a+rX build/client
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           name: github-pages
-          path: build/
+          path: build/client
 
   deploy:
     environment:
