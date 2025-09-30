@@ -44,6 +44,10 @@ jobs:
       - name: Set correct permissions
         run: chmod -R a+rX build
 
+      - name: Copy index.html to client build
+        run: |
+          echo '<!DOCTYPE html><html><head><meta charset="utf-8" /><title>Portfolio Site</title><base href="/portfolio-site/" /></head><body><div id="root"></div></body></html>' > build/client/index.html   
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
