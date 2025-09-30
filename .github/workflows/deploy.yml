@@ -2,9 +2,11 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ main ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ main ]
+  workflow_dispatch:
+
 
 permissions:
   contents: read
@@ -41,6 +43,9 @@ jobs:
 
       - name: Set correct permissions
         run: chmod -R a+rX build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
