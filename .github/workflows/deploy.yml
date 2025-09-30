@@ -27,17 +27,17 @@ jobs:
           node-version: '20'
           cache: 'yarn'
 
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-
       - name: Prune old build directory
-        run: rm -rf build
+        run: rm -rf build || true
 
       - name: Build
         run: yarn build
 
-      - name: Clean up links and permissions
+      - name: Clean up symlinks
         run: find build -type l -delete || true
+
+      - name: Set correct permissions
+        run: chmod -R a+rX build
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
