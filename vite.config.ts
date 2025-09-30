@@ -5,7 +5,7 @@ import path from "path";
 export default defineConfig(({command}) => ({
     plugins: [
         remix({
-            
+
             ignoredRouteFiles: ["**/.*"],
             ssr: false,
             basename: "/portfolio-site/",
@@ -21,7 +21,7 @@ export default defineConfig(({command}) => ({
             localsConvention: "camelCase",
         },
     },
-    base: "./",
+    base: command === "build" ? "/portfolio-site/" : "/",
     build: {
         outDir: "build/client",
         emptyOutDir: true,
