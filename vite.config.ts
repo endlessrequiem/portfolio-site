@@ -20,7 +20,7 @@ export default defineConfig(({command}) => ({
             localsConvention: "camelCase",
         },
     },
-    base: command === "build" ? "/portfolio-site/" : "/",
+    base: "./",
     build: {
         outDir: "build",
         emptyOutDir: true,
