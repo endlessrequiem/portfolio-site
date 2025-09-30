@@ -10,12 +10,12 @@ export const AboutMeSection: React.FC<AboutMeSectionProps> = ({title}) => {
     return (
         <>
             <SectionHeader title={title}/>
-            <view className="liquid-glass" style={{
+            <div className="liquid-glass" style={{
                 padding: "20px",
                 textAlign: "left",
             }}>
                 {strings.aboutMeText}
-            </view>
+            </div>
         </>
     )
 }

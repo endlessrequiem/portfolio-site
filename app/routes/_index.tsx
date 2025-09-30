@@ -1,5 +1,4 @@
 import type { MetaFunction } from "@remix-run/node";
-import styles from "./styles.module.css";
 import { strings } from "./page.strings";
 import { PageHeader } from "~/components/PageHeader";
 import { SkillsSection } from "~/components/SkillsSection";
@@ -22,18 +21,65 @@ export const meta: MetaFunction = () => {
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
+    <div style={{
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      minHeight: "100vh",
+      paddingLeft: "80px",
+      paddingRight: "80px",
+      paddingBottom: "60px",
+      gap: "12px",
+      fontFamily: "var(--font-geist-sans)",
+      color: "#ffffff"
+    }}>
+      <main style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "32px",
+        gridRowStart: "2"
+      }}>
         <PageHeader title={strings.header} subTitle={strings.jobTitle} content={strings.subHeader}/>
-        <hr className={styles.divider}/>
+        <hr style={{
+          width: "100%",
+          height: "2px",
+          background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent)",
+          border: "none",
+          margin: "20px 0"
+        }}/>
         <AboutMeSection title={strings.aboutMeTitle}/>
-        <hr className={styles.divider}/>
+        <hr style={{
+          width: "100%",
+          height: "2px",
+          background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent)",
+          border: "none",
+          margin: "20px 0"
+        }}/>
         <ExperienceSection header={strings.experienceHeader} workExperience={workExperience}/>
-        <hr className={styles.divider}/>
+        <hr style={{
+          width: "100%",
+          height: "2px",
+          background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent)",
+          border: "none",
+          margin: "20px 0"
+        }}/>
         <ProjectSection projects={projects} sectionTitle={strings.projectsHeader}/>
-        <hr className={styles.divider}/>
+        <hr style={{
+          width: "100%",
+          height: "2px",
+          background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent)",
+          border: "none",
+          margin: "20px 0"
+        }}/>
         <SkillsSection title={strings.skillsHeader} listItems={strings.skills}/>
-        <hr className={styles.divider}/>
+        <hr style={{
+          width: "100%",
+          height: "2px",
+          background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent)",
+          border: "none",
+          margin: "20px 0"
+        }}/>
         <EducationSection
           sectionTitle={strings.educationHeader}
           university={strings.university}
@@ -43,7 +89,13 @@ export default function Home() {
           activities={strings.activities}
         />
       </main>
-      <footer className={styles.footer} style={{paddingTop: 12}}>
+      <footer style={{
+        marginTop: "72px",
+        gridRowStart: "3",
+        display: "flex",
+        gap: "24px",
+        paddingTop: "12px"
+      }}>
         <FooterSection items={[linkedInFooter, githubFooter]}/>
       </footer>
     </div>

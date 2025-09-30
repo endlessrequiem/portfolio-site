@@ -9,7 +9,7 @@ type PageHeaderProps = {
 
 export const PageHeader: React.FC<PageHeaderProps> = ({title, subTitle, content}) => {
     return (
-        <view className="liquid-glass" style={{padding: "20px", textAlign: "center", marginTop: "16px"}}>
+        <div className="liquid-glass" style={{padding: "20px", textAlign: "center", marginTop: "16px"}}>
             <h1 style={{marginBottom: "12px"}}>{title}</h1>
             <h3 style={{marginBottom: "6px"}}>{subTitle}</h3>
             <div style={{
@@ -24,6 +24,6 @@ export const PageHeader: React.FC<PageHeaderProps> = ({title, subTitle, content}
                     <Pill text={text} index={index} key={index}/>
                 ))}
             </div>
-        </view>
+        </div>
     )
 }

@@ -81,36 +81,8 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ((current) => {
         };
     }, [expandedImage, isTransitioning]);
 
-    const imageWidth = 800;
-    const imageHeight = 600;
-
-    const imageStyle = {
-        width: "33%",
-        marginLeft: "10px",
-        marginRight: "10px",
-        marginTop: "10px",
-        marginBottom: "48px",
-        padding: "5px",
-        cursor: "pointer",
-        objectFit: "cover",
-        transition: "all 0.3s ease-in-out",
-    };
-
-    const expandedImageStyle = {
-        width: "80%",
-        zIndex: 1000,
-        position: "fixed",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-        maxHeight: "80vh",
-        objectFit: "contain",
-        opacity: isTransitioning ? 0.3 : 1,
-        transition: "all 0.3s ease-in-out, opacity 0.15s ease-in-out",
-    };
-
     return (
-        <view className="liquid-glass" style={{
+        <div className="liquid-glass" style={{
             padding: "20px",
             justifyContent: "space-between",
             flex: 1,
@@ -294,6 +266,6 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ((current) => {
                     </button>
                 </>
             )}
-        </view>
+        </div>
     )
 })
