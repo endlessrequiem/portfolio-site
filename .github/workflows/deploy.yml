@@ -14,6 +14,8 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
       - name: Checkout
@@ -31,14 +33,14 @@ jobs:
       - name: Build
         run: yarn build
 
+      - name: Clean up symlinks
+        run: find build -type l -delete || true
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
           path: build/
-
-      - name: Clean up symlinks (Optional, but safe)
-        run: find build -type l -delete || true
 
   deploy:
     environment:
@@ -46,6 +48,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
+
+    permissions:
+      pages: write
+      id-token: write
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
