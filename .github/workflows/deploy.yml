@@ -44,10 +44,6 @@ jobs:
       - name: Set correct permissions
         run: chmod -R a+rX build
 
-      - name: Copy index.html to client build
-        run: |
-          cp index.html build/client/
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
