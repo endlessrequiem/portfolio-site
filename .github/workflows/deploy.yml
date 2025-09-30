@@ -37,10 +37,10 @@ jobs:
         run: yarn build
 
       - name: Clean up symlinks
-        run: find build -type l -delete || true
+        run: find build/client -type l -delete || true
 
       - name: Set correct permissions
-        run: chmod -R a+rX build
+        run: chmod -R a+rX build/client
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
