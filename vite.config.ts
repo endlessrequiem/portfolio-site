@@ -7,6 +7,7 @@ export default defineConfig(({command}) => ({
         remix({
             ignoredRouteFiles: ["**/.*"],
             ssr: false,
+            basename: "/portfolio-site/",
         }),
     ],
     resolve: {
