@@ -20,8 +20,6 @@ export type Project = {
     projectImages: string[];
 }
 
-const DELAY_TIME = 100;
-
 export const ProjectSection: React.FC<ProjectSectionProps> = ({projects, sectionTitle}: ProjectSectionProps) => {
     return (
         <>
@@ -42,17 +40,13 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ((current) => {
         setExpandedImage(expandedImage === index ? null : index);
     };
 
-    const handleTransition = (newExpandedImage: number) => {
-        setExpandedImage(newExpandedImage);
-        setTimeout(() => setIsTransitioning(false), DELAY_TIME);
-    }
-
     const goToPreviousImage = () => {
         if (expandedImage !== null && expandedImage > 0 && !isTransitioning) {
             setIsTransitioning(true);
             setTimeout(() => {
-                handleTransition(expandedImage - 1)
-            }, DELAY_TIME);
+                setExpandedImage(expandedImage - 1);
+                setTimeout(() => setIsTransitioning(false), 150);
+            }, 150);
         }
     };
 
@@ -60,8 +54,9 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ((current) => {
         if (expandedImage !== null && expandedImage < projectImages.length - 1 && !isTransitioning) {
             setIsTransitioning(true);
             setTimeout(() => {
-                handleTransition(expandedImage + 1)
-            }, DELAY_TIME);
+                setExpandedImage(expandedImage + 1);
+                setTimeout(() => setIsTransitioning(false), 150);
+            }, 150);
         }
     };
 
