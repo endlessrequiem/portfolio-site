@@ -2,7 +2,7 @@ import { vitePlugin as remix } from "@remix-run/dev";
 import { defineConfig } from "vite";
 import path from "path";
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [
     remix({
       ignoredRouteFiles: ["**/.*"],
@@ -18,4 +18,9 @@ export default defineConfig({
       localsConvention: "camelCase",
     },
   },
-});
+  base: command === "build" ? "/portfolio-site/" : "/",
+  build: {
+    outDir: "build",
+    emptyOutDir: true,
+  },
+}));

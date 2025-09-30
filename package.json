@@ -11,7 +11,9 @@
     "typecheck": "tsc",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build/client"
+    "deploy": "gh-pages -d build/client",
+    "build:static": "remix vite:build && cp -r build/client/* build/",
+    "deploy:static": "npm run build:static && gh-pages -d build"
   },
   "dependencies": {
     "@remix-run/node": "^2.8.1",
