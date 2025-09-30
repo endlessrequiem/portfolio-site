@@ -3,7 +3,6 @@
 import React, {useState} from "react";
 import {SectionHeader} from "@/components/SectionHeader";
 import {Pill} from "@/components/Pill";
-import Image from "next/image";
 
 type ProjectSectionProps = {
     sectionTitle: string;
@@ -123,15 +122,31 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ((current) => {
             <Pill text={projectName} textSize={"large"}/>
             <h4 style={{marginBottom: "18px", marginTop: "18px"}}>{projectDescription}</h4>
             {projectImages.map((image, index) => (
-                <Image
+                <img
                     src={image}
                     alt={projectName}
                     key={index}
                     className="liquid-glass"
-                    // @ts-expect-error: style is compatible
-                    style={expandedImage === index ? expandedImageStyle : imageStyle}
-                    width={imageWidth}
-                    height={imageHeight}
+                    style={{
+                        width: expandedImage === index ? "80%" : "33%",
+                        marginLeft: "10px",
+                        marginRight: "10px",
+                        marginTop: "10px",
+                        marginBottom: "48px",
+                        padding: "5px",
+                        cursor: "pointer",
+                        zIndex: expandedImage === index ? 1000 : 1,
+                        position: expandedImage === index ? "fixed" : "static",
+                        top: expandedImage === index ? "50%" : "auto",
+                        left: expandedImage === index ? "50%" : "auto",
+                        transform: expandedImage === index ? "translate(-50%, -50%)" : "none",
+                        maxHeight: expandedImage === index ? "80vh" : "auto",
+                        objectFit: expandedImage === index ? "contain" : "cover",
+                        opacity: expandedImage === index ? (isTransitioning ? 0.3 : 1) : 1,
+                        transition: expandedImage === index
+                            ? "all 0.3s ease-in-out, opacity 0.15s ease-in-out"
+                            : "all 0.3s ease-in-out",
+                    }}
                     onClick={() => handleImageClick(index)}
                     onMouseEnter={(e) => {
                         if (expandedImage !== index) {
