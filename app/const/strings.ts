@@ -58,6 +58,7 @@ export const strings = {
     linkedIn: "LinkedIn",
     github: "GitHub",
     projectsHeader: "Highlighted Projects",
+    projectsSubHeader: "Click Image to view in color",
     deviceWidgets: "Android IoT Device Widgets",
     deviceWidgetsDescription: "For my Android Widgets project, I developed native Android Widgets for the SmartRent Resident app. This was particularly interesting because the main app itself is built in React Native, so I got to bridge that gap. I created widgets that let users control their smart locks directly from their home screen for quick locking/unlocking, and also widgets for operating smart thermostats to adjust temperatures instantly. My focus was on making sure these widgets were super functional, highly performant (so they updated smoothly and responded fast), and really easy to use for residents.",
     packages: "Packages",

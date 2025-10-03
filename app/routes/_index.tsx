@@ -64,7 +64,8 @@ export default function Home() {
                     border: "none",
                     margin: "20px 0"
                 }}/>
-                <ProjectSection projects={projects} sectionTitle={strings.projectsHeader}/>
+                <ProjectSection projects={projects} sectionTitle={strings.projectsHeader}
+                                sectionSubHeader={strings.projectsSubHeader}/>
                 <hr style={{
                     width: "100%",
                     height: "2px",
