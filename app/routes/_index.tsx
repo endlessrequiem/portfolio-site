@@ -32,7 +32,6 @@ export default function Home() {
             paddingBottom: "60px",
             gap: "12px",
             fontFamily: "var(--font-geist-sans)",
-            color: "#ffffff"
         }}>
             <main style={{
                 display: "flex",

@@ -28,7 +28,6 @@ export const Pill: React.FC<PillProps> = ({text, index, textSize}) => {
                     padding: "8px 16px",
                     fontSize: fontSize(),
                     fontFamily: "var(--font-geist-mono)",
-                    color: "#ffffff",
                     cursor: "default",
                     transition: "all 0.2s ease-in-out",
                     userSelect: "none",

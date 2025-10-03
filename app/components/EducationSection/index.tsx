@@ -41,7 +41,6 @@ export const EducationSection: React.FC<EducationSectionProps> = ({
                         <h2 style={{
                             fontSize: "20px",
                             fontWeight: "600",
-                            color: "#ffffff",
                             margin: "0"
                         }}>{university}</h2>
                         <Pill text={classOf}/>
@@ -49,7 +48,6 @@ export const EducationSection: React.FC<EducationSectionProps> = ({
                     <h3 style={{
                         fontSize: "16px",
                         fontWeight: "500",
-                        color: "rgba(255, 255, 255, 0.9)",
                         margin: "0",
                         fontFamily: "var(--font-geist-mono)"
                     }}>{degree}</h3>
@@ -60,7 +58,6 @@ export const EducationSection: React.FC<EducationSectionProps> = ({
                     <h4 style={{
                         fontSize: "16px",
                         fontWeight: "600",
-                        color: "#ffffff",
                         margin: "0 0 16px 0",
                         fontFamily: "var(--font-geist-mono)"
                     }}>{extracurricularsTitle}</h4>
