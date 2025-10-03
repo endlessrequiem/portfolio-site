@@ -4,11 +4,13 @@ import {Pill} from "~/components/Pill";
 
 type ProjectSectionProps = {
     sectionTitle: string;
+    sectionSubHeader: string;
     projects: Project[];
 }
 
 type ProjectComponentProps = {
     project: Project;
+    sectionSubHeader: string;
 }
 
 export type Project = {
@@ -19,12 +21,16 @@ export type Project = {
 
 const DELAY_TIME = 100;
 
-export const ProjectSection: React.FC<ProjectSectionProps> = ({projects, sectionTitle}: ProjectSectionProps) => {
+export const ProjectSection: React.FC<ProjectSectionProps> = ({
+                                                                  projects,
+                                                                  sectionTitle,
+                                                                  sectionSubHeader
+                                                              }: ProjectSectionProps) => {
     return (
         <>
             <SectionHeader title={sectionTitle}/>
             {projects.map((project, index) => (
-                <ProjectComponent project={project} key={index}/>
+                <ProjectComponent project={project} key={index} sectionSubHeader={sectionSubHeader}/>
             ))}
         </>
     )
@@ -116,6 +122,7 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ((current) => {
                         transition: expandedImage === index
                             ? "all 0.3s ease-in-out, opacity 0.15s ease-in-out"
                             : "all 0.3s ease-in-out",
+                        filter: expandedImage !== index ? "grayscale(100%)" : "grayscale(0%)",
                     }}
                     onClick={() => handleImageClick(index)}
                     onMouseEnter={(e) => {
@@ -130,6 +137,9 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ((current) => {
                     }}
                 />
             ))}
+            <div style={{marginBottom: "9px"}}>
+                <Pill text={current.sectionSubHeader}/>
+            </div>
             {expandedImage !== null && (
                 <>
                     <div
