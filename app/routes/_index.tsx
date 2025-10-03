@@ -1,5 +1,5 @@
-import type {MetaFunction} from "@remix-run/node";
-import {strings} from "../const/strings";
+import type {LinksFunction, MetaFunction} from "@remix-run/node";
+import {strings} from "~/const/strings";
 import {PageHeader} from "~/components/PageHeader";
 import {SkillsSection} from "~/components/SkillsSection";
 import React from "react";
@@ -11,13 +11,7 @@ import {FooterSection} from "~/components/FooterSection";
 import {githubFooter, linkedInFooter} from "~/const/footer";
 import {ProjectSection} from "~/components/ProjectSection";
 import {projects} from "~/const/projects";
-
-export const meta: MetaFunction = () => {
-    return [
-        {title: "Austin White, Software Engineer"},
-        {name: "description", content: "Portfolio of Austin White, Software Engineer"},
-    ];
-};
+import Divider from "~/components/Divider";
 
 export default function Home() {
     return (
@@ -40,46 +34,16 @@ export default function Home() {
                 gridRowStart: "2"
             }}>
                 <PageHeader title={strings.header} subTitle={strings.jobTitle} content={strings.subHeader}/>
-                <hr style={{
-                    width: "100%",
-                    height: "2px",
-                    background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent)",
-                    border: "none",
-                    margin: "20px 0"
-                }}/>
+                <Divider/>
                 <AboutMeSection title={strings.aboutMeTitle}/>
-                <hr style={{
-                    width: "100%",
-                    height: "2px",
-                    background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent)",
-                    border: "none",
-                    margin: "20px 0"
-                }}/>
+                <Divider/>
                 <ExperienceSection header={strings.experienceHeader} workExperience={workExperience}/>
-                <hr style={{
-                    width: "100%",
-                    height: "2px",
-                    background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent)",
-                    border: "none",
-                    margin: "20px 0"
-                }}/>
+                <Divider/>
                 <ProjectSection projects={projects} sectionTitle={strings.projectsHeader}
                                 sectionSubHeader={strings.projectsSubHeader}/>
-                <hr style={{
-                    width: "100%",
-                    height: "2px",
-                    background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent)",
-                    border: "none",
-                    margin: "20px 0"
-                }}/>
+                <Divider/>
                 <SkillsSection title={strings.skillsHeader} listItems={strings.skills}/>
-                <hr style={{
-                    width: "100%",
-                    height: "2px",
-                    background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent)",
-                    border: "none",
-                    margin: "20px 0"
-                }}/>
+                <Divider/>
                 <EducationSection
                     sectionTitle={strings.educationHeader}
                     university={strings.university}
