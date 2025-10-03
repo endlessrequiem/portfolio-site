@@ -1,5 +1,5 @@
 import {Experience} from "~/components/ExperienceSection";
-import {strings} from "~/routes/page.strings";
+import {strings} from "~/const/strings";
 
 export const engTwoExp: Experience = {
     title: strings.engTwoTitle,
