@@ -1,4 +1,3 @@
-import type {LinksFunction, MetaFunction} from "@remix-run/node";
 import {strings} from "~/const/strings";
 import {PageHeader} from "~/components/PageHeader";
 import {SkillsSection} from "~/components/SkillsSection";
