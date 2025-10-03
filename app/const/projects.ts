@@ -1,12 +1,12 @@
 import {Project} from "~/components/ProjectSection";
-import lockWidgetImage from "~/resources/images/IMG_1714.png?url";
-import thermostatWidgetImage from "~/resources/images/IMG_1708.png?url";
-import packagesList from "~/resources/images/Screenshot_20240311-085924.png?url";
-import packageHistory from "~/resources/images/Screenshot_20240311-085930.png?url";
-import english from "~/resources/images/IMG_1800.jpeg?url";
-import spanish from "~/resources/images/IMG_1801.jpeg?url";
-import messagesList from "~/resources/images/Screenshot_20230417-122801.png?url";
-import message from "~/resources/images/Screenshot_20230417-123003.png?url";
+import lockWidgetImage from "~/resources/images/lock_widget.png";
+import thermostatWidgetImage from "~/resources/images/thermostat_widget.png";
+import packagesList from "~/resources/images/packages_list.png";
+import packageHistory from "~/resources/images/packages_history.png";
+import english from "~/resources/images/localization_en.jpeg";
+import spanish from "~/resources/images/localization_es.jpeg";
+import messagesList from "~/resources/images/community_broadcasts_list.png";
+import message from "~/resources/images/community_broadcast.png";
 import {strings} from "~/const/strings";
 
 export const widgetProject: Project = {
