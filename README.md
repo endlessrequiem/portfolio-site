@@ -1,6 +1,6 @@
-# Austin White - Portfolio Site
+# Austin White's Portfolio Site
 
-A modern, responsive portfolio website built with Remix and featuring a beautiful glassmorphism design.
+A modern, responsive portfolio website built with Remix
 
 ## 🚀 Live Site
 
@@ -12,27 +12,11 @@ at: [https://endlessrequiem.github.io/portfolio-site](https://endlessrequiem.git
 - **Framework**: Remix 2.8.1
 - **Build Tool**: Vite 5.4.20
 - **Language**: TypeScript
-- **Styling**: CSS with glassmorphism effects
+- **Styling**: CSS
 - **Icons**: React Icons
 - **Deployment**: GitHub Pages
 
-## 🏗️ Development
-
-### Prerequisites
-
-- Node.js 18+
-- Yarn package manager
-
-### Installation
-
 ```bash
-# Clone the repository
-git clone https://github.com/endlessrequiem/portfolio-site.git
-cd portfolio-site
-
-# Install dependencies
-yarn install
-
 # Start development server
 yarn dev
 ```
@@ -48,42 +32,4 @@ The site will be available at `http://localhost:5173/portfolio-site/`
 - `yarn lint` - Run ESLint
 - `yarn deploy:static` - Deploy to GitHub Pages
 
-## 🚀 Deployment
-
-### Automatic Deployment (GitHub Actions)
-
-The site is automatically deployed to GitHub Pages when you push to the `main` or `master` branch. The GitHub Actions
-workflow will:
-
-1. Build the Remix application
-2. Deploy the static files to GitHub Pages
-3. Make the site available at `https://endlessrequiem.github.io/portfolio-site`
-
-### Manual Deployment
-
-To deploy manually:
-
-```bash
-# Build and deploy to GitHub Pages
-yarn deploy:static
-```
-
-## 📁 Project Structure
-
-```
-app/
-├── components/          # React components
-│   ├── AboutMe/
-│   ├── EducationSection/
-│   ├── ExperienceSection/
-│   ├── FooterSection/
-│   ├── PageHeader/
-│   ├── ProjectSection/
-│   └── SkillsSection/
-├── const/              # Constants and data
-├── resources/          # Images and assets
-├── routes/            # Remix routes
-├── styles/            # CSS files
-└── root.tsx          # Root layout
-```
 
