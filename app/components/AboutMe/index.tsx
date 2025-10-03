@@ -1,5 +1,5 @@
 import React from "react";
-import {strings} from "~/routes/page.strings";
+import {strings} from "~/const/strings";
 import {SectionHeader} from "~/components/SectionHeader";
 
 type AboutMeSectionProps = {

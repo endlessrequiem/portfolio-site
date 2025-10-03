@@ -7,7 +7,7 @@ import english from "~/resources/images/IMG_1800.jpeg?url";
 import spanish from "~/resources/images/IMG_1801.jpeg?url";
 import messagesList from "~/resources/images/Screenshot_20230417-122801.png?url";
 import message from "~/resources/images/Screenshot_20230417-123003.png?url";
-import {strings} from "~/routes/page.strings";
+import {strings} from "~/const/strings";
 
 export const widgetProject: Project = {
     projectName: strings.deviceWidgets,

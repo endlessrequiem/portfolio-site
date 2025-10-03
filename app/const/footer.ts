@@ -1,5 +1,5 @@
 import {FooterItem} from "~/components/FooterSection";
-import {strings} from "~/routes/page.strings";
+import {strings} from "~/const/strings";
 
 export const linkedInFooter: FooterItem = {
     text: strings.linkedIn,

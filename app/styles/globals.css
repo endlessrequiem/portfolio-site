@@ -1,8 +1,8 @@
 :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-    --gradient-start: #61DBFB;
-    --gradient-end: #34A853;
+    --gradient-start: rgba(255, 255, 255, 0.25);
+    --gradient-end: rgb(0, 0, 0);
     --glass-background: rgba(255, 255, 255, 0.15);
     --glass-border: rgba(255, 255, 255, 0.2);
     --glass-shadow: 0 4px 16px 4px rgba(255, 255, 255, 0.1);
@@ -20,7 +20,7 @@ body {
 body {
     color: var(--foreground);
     background: linear-gradient(180deg, var(--gradient-start) 0%, var(--gradient-end) 100%) fixed;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Droid Sans", monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     min-height: 100vh;
