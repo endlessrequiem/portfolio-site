@@ -13,18 +13,7 @@ export const meta: MetaFunction = () => [
     {name: "description", content: "Portfolio of Austin White, Software Engineer"},
 ];
 
-export const links: LinksFunction = () => {
-    return [
-        {
-            rel: "stylesheet",
-            href: "/app/styles/globals.css",
-        },
-    ];
-};
-
 export default function App() {
-
-
     return (
         <html lang="en">
         <head>
