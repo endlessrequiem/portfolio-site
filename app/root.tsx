@@ -17,11 +17,11 @@ export const links: LinksFunction = () => {
     return [
         {
             rel: "icon",
-            href: "/app/resources/icon.svg?",
+            href: "/app/resources/icon.svg",
         },
         {
             rel: "stylesheet",
-            href: "/app/styles/globals.css?",
+            href: "/app/styles/globals.css",
         },
     ];
 };
