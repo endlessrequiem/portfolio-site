@@ -23,12 +23,14 @@ export const links: LinksFunction = () => {
 };
 
 export default function App() {
+
+
     return (
         <html lang="en">
         <head>
             <meta charSet="utf-8"/>
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
-            <link rel="icon" href="/portfolio-site/favicon.ico"/>
+            <link rel="icon" href={`${process.env.PUBLIC_URL || ""}/favicon.ico`}/>
             <Meta/>
             <Links/>
         </head>
