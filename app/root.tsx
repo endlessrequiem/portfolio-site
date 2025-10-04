@@ -1,7 +1,6 @@
 import type {LinksFunction, MetaFunction} from "@remix-run/node";
 import {
     Links,
-    LiveReload,
     Meta,
     Outlet,
     Scripts,
@@ -18,8 +17,11 @@ export const links: LinksFunction = () => {
     return [
         {
             rel: "icon",
-            href: "/favicon.svg",
-            type: "image/svg+xml",
+            href: "/app/resources/icon.svg",
+        },
+        {
+            rel: "stylesheet",
+            href: "/app/styles/globals.css",
         },
     ];
 };
@@ -37,7 +39,6 @@ export default function App() {
         <Outlet/>
         <ScrollRestoration/>
         <Scripts/>
-        <LiveReload/>
         </body>
         </html>
     );
