@@ -16,10 +16,6 @@ export const meta: MetaFunction = () => [
 export const links: LinksFunction = () => {
     return [
         {
-            rel: "icon",
-            href: "/app/resources/icon.svg",
-        },
-        {
             rel: "stylesheet",
             href: "/app/styles/globals.css",
         },
@@ -32,6 +28,7 @@ export default function App() {
         <head>
             <meta charSet="utf-8"/>
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            <link rel="icon" href="/favicon.ico"/>
             <Meta/>
             <Links/>
         </head>
