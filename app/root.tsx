@@ -17,7 +17,7 @@ export default function App() {
     return (
         <html lang="en">
         <head>
-            <link rel="icon" href="portfolio-site/favicon.ico"/>
+            <link rel="icon" href="portfolio-site/favicon.ico?v=2"/>
             <meta charSet="utf-8"/>
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
             <Meta/>
