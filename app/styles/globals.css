@@ -1,7 +1,7 @@
 :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-    --gradient-start: rgba(255, 255, 255, 0.25);
+    --gradient-start: rgba(143, 143, 143, 0.25);
     --gradient-end: rgb(0, 0, 0);
     --glass-background: rgba(255, 255, 255, 0.15);
     --glass-border: rgba(255, 255, 255, 0.2);
@@ -76,7 +76,7 @@ h3,
 h1,
 span,
 h2 {
-    color: #c4c4c4;
+    color: #e7e7e7;
     font-weight: 600;
     text-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
 }
