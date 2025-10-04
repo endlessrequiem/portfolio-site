@@ -17,8 +17,6 @@ export default function App() {
     return (
         <html lang="en">
         <head>
-            <meta charSet="utf-8"/>
-            <meta name="viewport" content="width=device-width, initial-scale=1"/>
             <link
                 rel="icon"
                 type="image/x-icon"
@@ -28,6 +26,8 @@ export default function App() {
                 rel="shortcut icon"
                 href="/portfolio-site/favicon.ico?v=2"
             />
+            <meta charSet="utf-8"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
             <Meta/>
             <Links/>
         </head>
