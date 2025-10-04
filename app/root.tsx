@@ -1,4 +1,4 @@
-import type {LinksFunction, MetaFunction} from "@remix-run/node";
+import type {MetaFunction} from "@remix-run/node";
 import {
     Links,
     Meta,
@@ -17,7 +17,7 @@ export default function App() {
     return (
         <html lang="en">
         <head>
-            <link rel="icon" href="/favicon.ico"/>
+            <link rel="icon" href="/favicon.ico" sizes={"any"}/>
             <meta charSet="utf-8"/>
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
             <Meta/>
