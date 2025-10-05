@@ -116,7 +116,7 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ((current) => {
                         top: expandedImage === index ? "50%" : "auto",
                         left: expandedImage === index ? "50%" : "auto",
                         transform: expandedImage === index ? "translate(-50%, -50%)" : "none",
-                        maxHeight: expandedImage === index ? "80vh" : "auto",
+                        maxHeight: expandedImage === index ? "100vh" : "auto",
                         objectFit: expandedImage === index ? "contain" : "cover",
                         opacity: expandedImage === index ? (isTransitioning ? 0.3 : 1) : 1,
                         transition: expandedImage === index
