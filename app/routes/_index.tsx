@@ -24,7 +24,6 @@ export default function Home() {
             paddingRight: "30px",
             paddingBottom: "60px",
             gap: "12px",
-            fontFamily: "var(--font-geist-sans)",
         }}>
             <main style={{
                 display: "flex",

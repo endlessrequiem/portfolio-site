@@ -49,7 +49,6 @@ export const EducationSection: React.FC<EducationSectionProps> = ({
                         fontSize: "16px",
                         fontWeight: "500",
                         margin: "0",
-                        fontFamily: "var(--font-geist-mono)"
                     }}>{degree}</h3>
                 </div>
 
@@ -59,7 +58,6 @@ export const EducationSection: React.FC<EducationSectionProps> = ({
                         fontSize: "16px",
                         fontWeight: "600",
                         margin: "0 0 16px 0",
-                        fontFamily: "var(--font-geist-mono)"
                     }}>{extracurricularsTitle}</h4>
                     <div style={{
                         display: "flex",

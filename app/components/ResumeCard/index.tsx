@@ -29,7 +29,6 @@ export const ResumeCard: React.FC<ResumeCardProps> = ({title, company, listItems
                         fontSize: "20px",
                         fontWeight: "600",
                         margin: "0 0 4px 0",
-                        fontFamily: "var(--font-geist-mono)"
                     }}>{title}</h2>
                     <div style={{
                         display: "flex",
@@ -38,7 +37,6 @@ export const ResumeCard: React.FC<ResumeCardProps> = ({title, company, listItems
                     }}>
                         <span style={{
                             fontSize: "16px",
-                            fontFamily: "var(--font-geist-mono)"
                         }}>@ {company}</span>
 
                     </div>
