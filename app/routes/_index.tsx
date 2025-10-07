@@ -35,12 +35,13 @@ export default function Home() {
                 <Divider/>
                 <AboutMeSection title={strings.aboutMeTitle}/>
                 <Divider/>
+                <SkillsSection title={strings.skillsHeader} listItems={strings.skills}/>
+                <Divider/>
                 <ExperienceSection header={strings.experienceHeader} workExperience={workExperience}/>
                 <Divider/>
                 <ProjectSection projects={projects} sectionTitle={strings.projectsHeader}
                                 sectionSubHeader={strings.projectsSubHeader}/>
-                <Divider/>
-                <SkillsSection title={strings.skillsHeader} listItems={strings.skills}/>
+
                 <Divider/>
                 <EducationSection
                     sectionTitle={strings.educationHeader}
