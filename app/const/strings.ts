@@ -13,6 +13,8 @@ export const strings = {
         "React Native",
         "Android",
         "React",
+        "HTML",
+        "CSS",
         "Git",
         "GitHub Copilot",
         "GitHub Actions",
