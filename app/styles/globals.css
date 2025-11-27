@@ -1,11 +1,11 @@
 :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-    --gradient-start: rgba(143, 143, 143, 0.25);
+    --gradient-start: rgb(0, 0, 0);
     --gradient-end: rgb(0, 0, 0);
-    --glass-background: rgba(255, 255, 255, 0.15);
+    --glass-background: rgb(0, 0, 0);
     --glass-border: rgba(255, 255, 255, 0.2);
-    --glass-shadow: 0 4px 16px 4px rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 4px 16px 4px rgba(255, 255, 255, 0.25);
     --glass-backdrop: blur(4px);
     margin-top: 24px;
 }
@@ -61,7 +61,7 @@ a {
 /* Footer Link Hover Effect */
 .footer-link-hover:hover {
     border-color: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 12px 40px 0 rgba(255, 255, 255, 0.5);
+    box-shadow: 0 12px 40px 0 rgba(64, 250, 2, 0.5);
     transform: translateY(-4px);
 }
 
@@ -76,9 +76,9 @@ h3,
 h1,
 span,
 h2 {
-    color: #e7e7e7;
+    color: #48ff00;
     font-weight: 600;
-    text-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 12px rgba(86, 255, 0, 0.75);
 }
 
 /* Section Headers with Blur Effect */
