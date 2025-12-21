@@ -3,7 +3,7 @@ export const strings = {
     jobTitle: "Software Engineer",
     subHeader: ["Android", "React Native", "React"],
     aboutMeTitle: "About Me",
-    aboutMeText: "I specialize in architecting mobile applications where connectivity and data integrity are reliability-critical. From integrated smart home ecosystems to autonomous robot swarms, I have a proven track record of delivering resilient, high-performance architectures in high-pressure environments. I’m driven by the challenge of making complex technology feel seamless and reliable for the end-user, no matter how high the stakes are.",
+    aboutMeText: "I specialize in architecting mobile applications where connectivity and data integrity are reliability-critical. From integrated smart home ecosystems to autonomous robot swarms, I have a proven track record of delivering resilient, performant architectures in high-pressure environments. I’m driven by the challenge of making complex technology feel seamless and reliable for the end-user, no matter how high the stakes are.",
     skillsHeader: "Skills",
     skills: [
         "TypeScript",
