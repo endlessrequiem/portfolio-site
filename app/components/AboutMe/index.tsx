@@ -12,7 +12,7 @@ export const AboutMeSection: React.FC<AboutMeSectionProps> = ({title}) => {
             <SectionHeader title={title}/>
             <div className="liquid-glass" style={{
                 padding: "20px",
-                textAlign: "left",
+                textAlign: "center",
             }}>
                 {strings.aboutMeText}
             </div>
